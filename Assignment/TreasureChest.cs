@@ -10,12 +10,12 @@
         // Default Constructor
         public TreasureChest()
         {
-            _material = Material.Aluminum;
-            _lockType = LockType.Light;
-            _lootQuality = LootQuality.Silver;
+            _material = Material.Aluminum; // treasurechest material
+            _lockType = LockType.Light; // type
+            _lootQuality = LootQuality.Silver; // quality
         }
 
-        public TreasureChest(Material Alumenium , LockType Light, LootQuality Silver)
+        public TreasureChest(Material Alumenium, LockType Light, LootQuality Silver)
         {
             _material = Alumenium;
             _lockType = Light;
@@ -75,7 +75,7 @@
             {
                 _state = State.Closed; // if it is closed , it will be opened
             }
-            else if (_state == State.Open) 
+            else if (_state == State.Open)
             {
                 Console.WriteLine("The chest is already opened!");
             }
@@ -113,9 +113,9 @@
 
         public enum State { Open, Closed, Locked };
         public enum Action { Open, Close, Lock, Unlock };
-        public enum Material{Oak, RichMahogany, Iron, Aluminum};
-        public enum LockType{Novice, Intermediate, Expert, Light}
-        public enum LootQuality{Grey, Green, Purple, Silver}
+        public enum Material { Oak, RichMahogany, Iron, Aluminum };
+        public enum LockType { Novice, Intermediate, Expert, Light }
+        public enum LootQuality { Grey, Green, Purple, Silver }
     }
 
     public class Program
